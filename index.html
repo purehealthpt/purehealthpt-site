@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark" style="color-scheme: dark;"><head>
+<!-- Google tag (Google Analytics) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9LS9XFKQNV"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-9LS9XFKQNV",{send_page_view:false});</script>
 <meta charset="utf-8">
-<meta name="site-version" content="2026-11-15 analytics-seo-faq ga-connected">
+<meta name="site-version" content="2026-11-15 analytics-seo-faq ga-static-tag">
 <meta name="description" content="Mobile physical therapy in Colorado for adults returning to sport after injury and for older adults who want to stay active. Led by Maegan Olivos, PT, DPT, MPH, GCS.">
 <link rel="canonical" href="https://purehealthpt.com/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Pure Health Physical Therapy"><meta property="og:title" content="Pure Health Physical Therapy | Mobile Physical Therapy"><meta property="og:description" content="Mobile physical therapy in Colorado for adults returning to sport after injury and for older adults who want to stay active. Led by Maegan Olivos, PT, DPT, MPH, GCS."><meta property="og:url" content="https://purehealthpt.com/">
@@ -204,7 +207,7 @@ if(!n||!/^\S+@\S+\.\S+$/.test(m)||!t){er2.textContent="Enter your name, a valid 
 er2.textContent="";track("contact_form_submit");location.href="mailto:"+TO+"?subject="+encodeURIComponent("Message from "+n)+"&body="+encodeURIComponent(t+"\n\n"+n+" ("+m+")")}});
 var TITLES={home:"Pure Health Physical Therapy | Mobile Physical Therapy",about:"About Maegan Olivos, PT, DPT | Pure Health Physical Therapy",schedule:"Book a Visit | Pure Health Physical Therapy",contact:"Contact | Pure Health Physical Therapy"};
 function curView(){var h=(location.hash||"#home").slice(1);return TITLES[h]?h:"home"}
-function gaInit(){var id=String(D.site.gaId||"").trim();if(!/^G-[A-Z0-9]{8,12}$/.test(id)||id.indexOf("XXXX")>-1||window._gaOn)return;window._gaOn=true;window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+id;document.head.appendChild(s);gtag("js",new Date());gtag("config",id,{send_page_view:false})}
+function gaInit(){var id=String(D.site.gaId||"").trim();if(!/^G-[A-Z0-9]{8,12}$/.test(id)||id.indexOf("XXXX")>-1||window._gaOn||typeof window.gtag==="function")return;window._gaOn=true;window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+id;document.head.appendChild(s);gtag("js",new Date());gtag("config",id,{send_page_view:false})}
 function track(n,p){try{if(window.gtag)gtag("event",n,p||{})}catch(x){}}
 function pv(h){document.title=TITLES[h]||TITLES.home;track("page_view",{page_title:document.title,page_location:location.origin+"/"+(h==="home"?"":h)})}
 function ldFaq(){var el=document.getElementById("ld-faq");if(!el){el=document.createElement("script");el.type="application/ld+json";el.id="ld-faq";document.head.appendChild(el)}el.textContent=JSON.stringify({"@context":"https://schema.org","@type":"FAQPage",mainEntity:D.home.faq.map(function(f){return{"@type":"Question",name:f.q,acceptedAnswer:{"@type":"Answer",text:f.a}}})}).replace(/</g,"\\u003c")}
